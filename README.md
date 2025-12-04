@@ -9,7 +9,7 @@ Da pisava ne bi vplivala sem najprej transliteriral vsa besedila v male ascii zn
 ## Frekvence bigramov
 
 Za vsako transliterirano besedilo sem sestavil vektor relativnih frekvenc bigramov aa, ab, ac, ...
-koda je v `glavni.py`, funkcije so v `jezik_nlp.py`, rezultat je datoteka frekvence_bigramov.csv`.
+koda je v `glavni.py`, funkcije so v `jezik_nlp.py`, rezultat je datoteka `frekvence_bigramov.csv`.
 Datoteke `test.py`, `bigram_frekvence_TEST.csv` so namenjene le testiranju funkcij v modulu.
 
 ## Gručenje
