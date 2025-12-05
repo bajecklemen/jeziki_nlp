@@ -140,5 +140,28 @@ def preberi_in_obdelaj_vse_datoteke(mapa_pot, bigram_atributi, stolpci_df):
     
     return df
 
+def preberi_in_obdelaj_datoteko(datoteka, bigram_atributi, stolpci_df):
+    """
+    Prebere datoteko s besedilom v neznanem jeziku in vrne dataframe.
+    """
+    podatki_za_df = []
+
+    try:
+        # Branje vsebine datoteke
+        with io.open(datoteka, 'r', encoding='utf-8') as f:
+            vsebina_besedila = f.read()
+        # Obdelava NLP funkcijami iz modula
+        tt = transliteriraj(vsebina_besedila)
+        frekvence = generiraj_frekvencni_vektor_bigramov(tt, bigram_atributi)
+        # Sestavljanje vektorja
+        vrstica = [''] + frekvence
+        podatki_za_df.append(vrstica)
+    except Exception as e:
+        print(f"Napaka pri obdelavi datoteke {datoteka}: {e}")
+        
+    # Kreiranje DataFrame
+    df = pd.DataFrame(podatki_za_df, columns=stolpci_df)
+    
+    return df
 
 

@@ -14,7 +14,7 @@ Datoteke `test.py`, `bigram_frekvence_TEST.csv` so namenjene le testiranju funkc
 
 ## Gručenje
 
-V delotoku `jeziki.ows` je gručenje jezikov, ne vem če je točno, ker nisem jezikoslovec.
+V delotoku `jeziki.ows` je gručenje jezikov, očitno podobne jezike da skupaj v gruče. Vsi slovanskiso skupaj.
 
 ## Prikaz na zemljevidu
 
@@ -23,8 +23,9 @@ Vse podatke o državah `globalni_dominantni_jeziki_z_govorci.csv` sem pripravil 
 
 ## Prepoznavanje jezika
 
-Ko že imamo za vsak jezik bigramski vektor, me je zanimalo, če bi lahko model napovedal v katerem jeziku je besedili.
-Delotok tega poskusa je v delotoku `identifikacija_jezika.ows`.
+Ko že imamo za vsak jezik bigramski vektor, me je zanimalo, če bi lahko model napovedal v katerem jeziku je besedilo.
+Delotok tega poskusa je v delotoku `identifikacija_jezika.ows`. Vsebuje en kup napovednih modelov in analizo, kateri je boljši.
+Če imamo besedilo in ne vemo v katerme jeziku je, ga damo v datoteko `besedilo_v_neznanem_jeziku.txt`, pošenemo skripto `neznan_jezik.py` ki shrani bigramsski vektor jezika v datoteko `frekvenca_bigramov_neznanega.csv`. To datoteko priklopimo v delotoku `identifikacija_jezika.ows`. Ponovno naložimo podatke in določimo jezik kot ciljno spremenljivko. Za zaneslivost napovedi je fino, če je vsaj kakih sto besed besedila.
 
 
 
